@@ -5,6 +5,11 @@ This repository contains a Laravel-based **Authorization Microservice** that man
 ---
 
 ## Project Structure
+# Laravel Authorization Microservice
+
+## Project Structure
+
+```plaintext
 app/
 ├── Http/
 │   └── Controllers/
