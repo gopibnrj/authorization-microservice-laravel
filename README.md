@@ -5,9 +5,6 @@ This repository contains a Laravel-based **Authorization Microservice** that man
 ---
 
 ## Project Structure
-# Laravel Authorization Microservice
-
-## Project Structure
 
 ```plaintext
 app/
@@ -28,6 +25,7 @@ database/
     └── audit_logs
 routes/
 └── api.php
+```
 
 ---
 
@@ -67,28 +65,45 @@ routes/
 ```bash
 git clone https://github.com/yourusername/laravel-authorization-microservice.git
 cd laravel-authorization-microservice
+```
 
-### Installation dependencies
+2. Install dependencies:
 
+```bash
 composer install
 cp .env.example .env
+```
 
+3. Generate the application key:
 
-### Generate application key:
+```bash
 php artisan key:generate
+```
+
+4. Run migrations and seed the database:
+
+```bash
 php artisan migrate
 php artisan db:seed
+```
+
+5. Start the development server:
+
+```bash
 php artisan serve
+```
 
 ---
 
 ### API Endpoints
-Method	URI	Description	Middleware
-POST	/api/login	User login	Guest
-GET	/api/user/permissions	List current user's permissions	auth:sanctum, permission:view-permissions
-POST	/api/roles	Create a new role	auth:sanctum, permission:create-roles
-POST	/api/permissions	Create a new permission	auth:sanctum, permission:create-permissions
-POST	/api/assign-role	Assign role to user	auth:sanctum, permission:assign-roles
-GET	/api/audit-logs	Fetch audit logs	auth:sanctum, permission:view-audit-logs
+
+| Method | URI                  | Description                     | Middleware                          |
+|--------|----------------------|---------------------------------|-------------------------------------|
+| POST   | /api/login           | User login                     | Guest                               |
+| GET    | /api/user/permissions| List current user's permissions| auth:sanctum, permission:view-permissions |
+| POST   | /api/roles           | Create a new role              | auth:sanctum, permission:create-roles |
+| POST   | /api/permissions     | Create a new permission        | auth:sanctum, permission:create-permissions |
+| POST   | /api/assign-role     | Assign role to user            | auth:sanctum, permission:assign-roles |
+| GET    | /api/audit-logs      | Fetch audit logs               | auth:sanctum, permission:view-audit-logs |
 
 Replace permissions with your actual permission keys as defined in your system.
