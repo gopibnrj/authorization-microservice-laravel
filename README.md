@@ -5,25 +5,25 @@ This repository contains a Laravel-based **Authorization Microservice** that man
 ---
 
 ## Project Structure
-
 app/
 ├── Http/
-│ └── Controllers/
-│ ├── AuthController.php
-│ ├── RoleController.php
-│ └── AuditLogController.php
+│   └── Controllers/
+│       ├── AuthController.php
+│       ├── RoleController.php
+│       └── AuditLogController.php
 ├── Models/
-│ ├── User.php
-│ ├── Role.php
-│ ├── Permission.php
-│ └── AuditLog.php
+│   ├── User.php
+│   ├── Role.php
+│   ├── Permission.php
+│   └── AuditLog.php
 database/
 └── migrations/
-├── users, roles, permissions tables
-├── pivot tables: role_user, permission_role
-└── audit_logs
+    ├── users, roles, permissions tables
+    ├── pivot tables: role_user, permission_role
+    └── audit_logs
 routes/
 └── api.php
+
 ---
 
 ## Features
